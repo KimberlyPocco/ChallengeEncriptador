@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Challenge Encriptador</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
+
 <body>
-    <img src="" alt="">
-    <header></header>
+    <!-- LOGO -->
+    <header>
+        <img class="logo" src="./img/logo.svg" alt="Logo">
+    </header>
+
+    <!-- ENCRIPTAR O DESEENCIPTAR MENSAJE -->
+    <main>
+        <section class="container-mensaje">
+
+            <textarea id="mensaje" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <div>
+                <h6  class="informacion"> 
+                    <i class="fas fa-exclamation-circle fa-lg"></i>
+                    Solo letras minúsculas y sin acentos
+                </h6>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" type="button" >Encriptar</button>
+                <button class="btn-desencriptar" type="button">Desencriptar</button>
+            </div>
+        </section>
+
+        <!-- COPIAR MENSAJE ENCRIPT ADO O DESENCRIPTADO -->
+        <section class="container-mensajeCopiado">
+            <textarea id="mensajeCopiado" cols="30" rows="10" readonly></textarea>
+            <div class="mensajeNoEncontrado">
+                <h5 class="primer-mensajeNoEncontrado">Ningún mensaje fue encontrado</h5>
+                <p class="segundo-mensajeNoEncontrado">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="botones">
+                <button class="btn-copiar" onclick="copiarMensaje()">Copiar</button>
+            </div>
+
+        </section>
+    </main>
 
     <footer>
-        
+        &copy; Kimberly Pocco 2023
     </footer>
+    <script src="./js/encriptador.js"></script>
+
 </body>
+
 </html>
